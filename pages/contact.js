@@ -10,10 +10,10 @@ class Index extends React.Component{
   render(){
 
     return(
-      <Layout title='Dev Solutions'>    
+      <Layout title='Contact | Dev Solutions'>    
+      	<h1 className="text-center"><b>CONTACT</b></h1>  
       </Layout>)
   }
-
 }
 
 export default Index;

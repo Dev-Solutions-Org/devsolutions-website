@@ -1,5 +1,6 @@
 // import { Link } from '../routes'
 import Layout from './../components/layout/Layout';
+import ServicesSection from './../components/services-section/ServicesSection';
 
 class Index extends React.Component{
 
@@ -10,7 +11,9 @@ class Index extends React.Component{
   render(){
 
     return(
-      <Layout title='Dev Solutions'>    
+      <Layout title='Services | Dev Solutions'> 
+      	<h1 className="text-center"><b>SERVICES</b></h1>  
+      	<ServicesSection/> 
       </Layout>)
   }
 
