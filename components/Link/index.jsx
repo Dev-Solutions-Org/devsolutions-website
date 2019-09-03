@@ -1,14 +1,13 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
-import clsx from 'clsx'
 import { withRouter } from 'next/router'
 import NextLink from 'next/link'
 
 const NextComposed = forwardRef(function NextComposed (props, ref) {
-  const { as, href, prefetch, ...other } = props
+  const { asHref, href, prefetch, ...other } = props
 
   return (
-    <NextLink href={href} as={as || `${href}/`}>
+    <NextLink href={href} as={asHref}>
       <a ref={ref} rel='alternate' hrefLang='en' {...other} />
     </NextLink>
   )
@@ -22,19 +21,13 @@ NextComposed.propTypes = {
 
 function Link (props) {
   const {
-    activeClassName = 'active',
     router,
-    className: classNameProps,
     innerRef,
     naked,
     ...other
   } = props
 
-  const className = clsx(classNameProps, {
-    [activeClassName]: router.pathname === props.href && activeClassName
-  })
-
-  return <NextComposed className={className} ref={innerRef} {...other} />
+  return <NextComposed ref={innerRef} {...other} />
 }
 
 Link.propTypes = {
