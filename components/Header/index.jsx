@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
-import classes from '../../styles/components/header.scss'
 import { Link } from '..'
+import classes from '../../styles/components/header.scss'
 
 export default () => (
   <Navbar className={`${classes.navbar} bg-white mb-2`} expand='md'>
