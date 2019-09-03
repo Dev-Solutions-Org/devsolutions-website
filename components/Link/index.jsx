@@ -34,9 +34,7 @@ function Link (props) {
     [activeClassName]: router.pathname === props.href && activeClassName
   })
 
-  if (naked) {
-    return <NextComposed className={className} ref={innerRef} {...other} />
-  }
+  return <NextComposed className={className} ref={innerRef} {...other} />
 }
 
 Link.propTypes = {

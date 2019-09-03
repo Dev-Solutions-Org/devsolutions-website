@@ -1,0 +1,23 @@
+footer {
+	width: 100vw;
+	background-color: #6e9872;
+}
+
+.footerMobile {
+	display: none;
+}
+
+.footerLogo {
+  width: 80%;
+}
+
+@media screen and (max-width: 580px) {
+	.footerDesktop {
+		display: none;
+	}
+
+	.footerMobile {
+		margin-top: 2em;
+		display: block;
+	}
+}

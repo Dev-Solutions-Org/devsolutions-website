@@ -1,20 +1,3 @@
-// import { Link } from '../routes'
-import Layout from './../components/layout/Layout';
-
-class Index extends React.Component{
-
-  constructor(){
-    super();
-    }
-
-  render(){
-
-    return(
-      <Layout title='Team | Dev Solutions'>    
-      	<h1 className="text-center"><b>TEAM</b></h1>  
-      </Layout>)
-  }
-
-}
-
-export default Index;
+export default () => (
+  <h1>Team</h1>
+)
