@@ -12,8 +12,8 @@ class ContactForm extends React.Component{
  render(){
 
   return(
-		   <div className="col-12 col-lg-6 mb-0 form" style={{
-		   	backgroundImage: "url('./../../static/ds-icon.png')"
+		   <div className="col-12 col-lg-6 form" style={{
+		   	backgroundImage: "url('./../../static/form-background.png')"
 		   }}>
 				<input type="text" name="name" placeholder="Full Name" className="mt-5 mb-3" id="nameForm" />
 				<input type="email" name="email" placeholder="E-mail" className="mb-3" id="emailForm" />

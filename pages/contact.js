@@ -13,10 +13,10 @@ class Index extends React.Component{
     return(
       <Layout title='Contact | Dev Solutions'>    
       	<h1 className="text-center"><b>CONTACT</b></h1>
-      	<div className="row">
+      	<div className="row my-3">
       		<ContactForm/>
       		<div className="col-12 col-lg-6 mb-3">
-      			<img src="./../static/green-logo.jpg" className="p-3 img-contact"/>
+      			<img src="./../static/contact-data.png" className="p-3 img-contact"/>
       		</div>
       	</div>
       </Layout>)

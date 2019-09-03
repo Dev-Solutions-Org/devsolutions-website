@@ -49,6 +49,11 @@ header {
 }
 @media screen and (max-width: 580px) {
 
+.header-logo {
+	height: 30vh;
+}
+
+
 .only-mobile {
 	display: block;
 }
