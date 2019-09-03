@@ -1,0 +1,11 @@
+{
+  "name": "devsolutions",
+  "version": 2,
+  "alias": "devsolutions.now.sh",
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@now/next"
+    }
+  ]
+}
