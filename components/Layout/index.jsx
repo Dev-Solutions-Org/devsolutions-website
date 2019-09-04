@@ -1,5 +1,6 @@
 import React from 'react'
-import { Header, Footer } from '..'
+import { Header } from '..';
+import Footer from './../Footer/index';
 
 export default ({ children }) => (
   <>

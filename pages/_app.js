@@ -1,15 +1,17 @@
 import React from 'react'
-import App from 'next/app'
+import App, { Container } from 'next/app'
 import Head from 'next/head'
 import NProgress from 'nextjs-progressbar'
 import { Layout } from '../components'
 import { EN_DESCRIPTION, KEYWORDS } from '../constants'
+import withReduxStore from '../lib/with-redux-store'
+import { Provider } from 'react-redux'
 
 class MyApp extends App {
   render () {
-    const { Component, pageProps } = this.props
+    const { Component, pageProps, reduxStore } = this.props
     return (
-      <>
+      <Container>
         <Head>
           <meta charSet='utf-8' />
           <meta
@@ -32,12 +34,14 @@ class MyApp extends App {
           <link href='https://fonts.googleapis.com/css?family=Montserrat&display=swap' rel='stylesheet' />
         </Head>
         <NProgress color='#6e9872' spinner={false} />
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </>
+        <Provider store={reduxStore}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </Provider>
+      </Container>
     )
   }
 }
 
-export default MyApp
+export default withReduxStore(MyApp);
