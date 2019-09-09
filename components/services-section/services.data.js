@@ -2,12 +2,12 @@ export const SERVICES = [
 	{
 		id: 1,
 		key: 'WEB',
-		image: './../../static/services/webdev.png'
+		image: './../../static/services/web-development.png'
 	},
 	{
 		id: 2,
 		key: 'MARKETING',
-		image: './../../static/services/planmark.png'
+		image: './../../static/services/marketing-plan.png'
 	},
 	{
 		id: 3,
@@ -17,17 +17,17 @@ export const SERVICES = [
 	{
 		id: 4,
 		key: 'GRAPHIC',
-		image: './../../static/services/graphicdesign.png'
+		image: './../../static/services/design.png'
 	},
 	{
 		id: 5,
 		key: 'VIDEO',
-		image: './../../static/services/videmarket.png'
+		image: './../../static/services/video-marketing.png'
 	},
 	{
 		id: 6,
 		key: 'SOCIAL',
-		image: './../../static/services/social-icon.png'
+		image: './../../static/services/social-media.png'
 	},
 	{
 		id: 7,

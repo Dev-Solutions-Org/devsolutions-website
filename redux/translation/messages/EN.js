@@ -1,7 +1,11 @@
 export const EN_MESSAGES = {
 	FOOTER: {
 		COPYRIGHT: 'All rights reserved',
-		CHOOSE: 'Choose the language'
+		CHOOSE: 'Choose the language',
+		SUBSCRIBE: 'Subscribe' ,
+		SUBSCRIBE_INFO: 'In order to be aware of our news, subscribe to our special newsletter. We will not provide any of your information to anyone.',
+		BUTTON: 'Suscribe',
+		EMAIL: 'Email'	
 	},
 	SERVICES: {
 		WEB: {
