@@ -3,12 +3,48 @@ footer {
 	background-color: #6e9872;
 }
 
+.clickable {
+	cursor: pointer;
+}
+
 .footerMobile {
 	display: none;
 }
 
 .footerLogo {
   width: 80%;
+}
+
+.form { 
+	display: flex;
+	flex-direction: column;
+ }
+
+.emailInput {
+ 	width: 50%;
+ 	border-radius: 1em;
+ }
+
+.emailInput::placeholder {
+ 	text-align: center;
+ }
+
+ .button {
+	display: block;
+	margin: 0 auto;
+	width: 20%;
+	background-color: #fff;
+	color: black;
+	border-radius: .8em;
+	border: solid #fff;
+	cursor: pointer;
+	box-shadow: 2.5px 5px black;
+	transition-duration: .5s;
+}
+
+.button:hover {
+	background-color: lightgray;
+	border: solid lightgray;
 }
 
 @media screen and (max-width: 580px) {
