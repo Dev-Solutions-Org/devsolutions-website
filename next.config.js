@@ -1,6 +1,9 @@
 const withSass = require('@zeit/next-sass')
 const withProgressBar = require('next-progressbar')
 const withPlugins = require('next-compose-plugins')
+const { withGraphQLConfig } = require('next-graphql-react/server')
+const webpack = require('webpack')
+require('dotenv').config()
 
 module.exports = withPlugins([
   [withSass, {
@@ -16,7 +19,15 @@ module.exports = withPlugins([
         profile: true
       }
     }
-  ]
+  ],
+  withGraphQLConfig
 ], {
-  target: 'serverless'
+  target: 'serverless',
+  webpack (config) {
+    config.plugins.push(
+      new webpack.EnvironmentPlugin(process.env)
+    )
+
+    return config
+  }
 })

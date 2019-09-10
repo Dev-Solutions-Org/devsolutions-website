@@ -1,17 +1,19 @@
 import React from 'react'
-import App, { Container } from 'next/app'
+import App from 'next/app'
 import Head from 'next/head'
 import NProgress from 'nextjs-progressbar'
+import { Provider } from 'react-redux'
+import { withGraphQLApp } from 'next-graphql-react'
+import { GraphQLProvider } from 'graphql-react'
 import { Layout } from '../components'
 import { EN_DESCRIPTION, KEYWORDS } from '../constants'
 import withReduxStore from '../lib/with-redux-store'
-import { Provider } from 'react-redux'
 
 class MyApp extends App {
   render () {
-    const { Component, pageProps, reduxStore } = this.props
+    const { Component, pageProps, graphql, reduxStore } = this.props
     return (
-      <Container>
+      <>
         <Head>
           <meta charSet='utf-8' />
           <meta
@@ -34,14 +36,16 @@ class MyApp extends App {
           <link href='https://fonts.googleapis.com/css?family=Montserrat&display=swap' rel='stylesheet' />
         </Head>
         <NProgress color='#6e9872' spinner={false} />
-        <Provider store={reduxStore}>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </Provider>
-      </Container>
+        <GraphQLProvider graphql={graphql}>
+          <Provider store={reduxStore}>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </Provider>
+        </GraphQLProvider>
+      </>
     )
   }
 }
 
-export default withReduxStore(MyApp);
+export default withGraphQLApp(withReduxStore(MyApp))
