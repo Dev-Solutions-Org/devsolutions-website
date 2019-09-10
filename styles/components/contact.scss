@@ -1,3 +1,13 @@
+.formCol {
+  background: url('/static/form-background.png') center no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+}
+
+.form {
+  padding: 32px 16px;
+}
+
 // Button
 
 .button {
@@ -15,6 +25,9 @@
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   padding: .84rem 2.14rem;
   font-size: .81rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%)
 }
 
 /*

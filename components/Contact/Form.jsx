@@ -4,9 +4,11 @@ import classes from '../../styles/components/contact.scss'
 
 export default () => (
   <Col
-    xs='12' lg='6'
+    xs='12'
+    md='6'
+    className={classes.formCol}
   >
-    <form>
+    <form className={classes.form}>
       <label class={`${classes.dLabelOutline} w-100`}>
         <input type='text' placeholder=' ' name='name' />
         <span>Name</span>
@@ -21,11 +23,12 @@ export default () => (
         <textarea rows='4' placeholder=' ' name='message' />
         <span>Message</span>
       </label>
-    </form>
-    <button
-      className={`${classes.button} w-100`}
-    >
+
+      <button
+        className={`${classes.button} w-50`}
+      >
       send
-    </button>
+      </button>
+    </form>
   </Col>
 )
