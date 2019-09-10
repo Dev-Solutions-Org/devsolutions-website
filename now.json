@@ -11,7 +11,7 @@
   "build": {
     "env": {
       "NODE_ENV": "production",
-      "API_URL": "https://devsolutions.herokuapp.com/graphql"
+      "API_URL": "@devsolutions-au"
     }
   }
 }

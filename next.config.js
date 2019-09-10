@@ -6,6 +6,7 @@ const webpack = require('webpack')
 require('dotenv').config()
 
 module.exports = withPlugins([
+  withGraphQLConfig,
   [withSass, {
     cssModules: true,
     cssLoaderOptions: {
@@ -19,8 +20,7 @@ module.exports = withPlugins([
         profile: true
       }
     }
-  ],
-  withGraphQLConfig
+  ]
 ], {
   target: 'serverless',
   webpack (config) {
