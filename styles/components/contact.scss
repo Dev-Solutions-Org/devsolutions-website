@@ -1,0 +1,210 @@
+// Button
+
+.button {
+  background: #6e9872;
+  color: #fff;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  white-space: normal;
+  cursor: pointer;
+  border: 0;
+  border-radius: .125rem;
+  box-shadow: 0 2px 5px 0
+  rgba(0,0,0,.16),0 2px 10px 0
+  rgba(0,0,0,.12);
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  padding: .84rem 2.14rem;
+  font-size: .81rem;
+}
+
+/*
+ * Inputs
+*/
+
+.dLabelOutline {
+  --pure-material-safari-helper1: rgb(var(--pure-material-primary-rgb, 110, 152, 114));
+  position: relative;
+  display: inline-block;
+  font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+  font-size: 16px;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+.dLabelOutline input,
+.dLabelOutline textarea {
+  box-sizing: border-box;
+  margin: 0;
+  margin-top: 6px;
+  border: solid 1px;
+  border-color: rgba(0, 0, 0, 0.3);
+  border-top-color: transparent;
+  border-radius: 4px;
+  padding: 15px 13px 15px;
+  width: 100%;
+  height: inherit;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: transparent;
+  box-shadow: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  caret-color: rgb(110, 152, 114);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.dLabelOutline input + span,
+.dLabelOutline textarea + span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  border-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-height: 100%;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 75%;
+  line-height: 15px;
+  font-weight: 600;
+  cursor: text;
+  transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+}
+
+.dLabelOutline input + span::before,
+.dLabelOutline input + span::after,
+.dLabelOutline textarea + span::before,
+.dLabelOutline textarea + span::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  margin-top: 6px;
+  border-top: solid 1px;
+  border-top-color: rgba(0, 0, 0, 0.3);
+  min-width: 10px;
+  height: 3px;
+  pointer-events: none;
+  box-shadow: inset 0 1px transparent;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.dLabelOutline input + span::before,
+.dLabelOutline textarea + span::before {
+  margin-right: 4px;
+  border-left: solid 1px transparent;
+  border-radius: 4px 0;
+}
+
+.dLabelOutline > input + span::after,
+.dLabelOutline > textarea + span::after {
+  flex-grow: 1;
+  margin-left: 4px;
+  border-right: solid 1px transparent;
+  border-radius: 0 4px;
+}
+
+.dLabelOutline:hover > input,
+.dLabelOutline:hover > textarea {
+  border-color: rgba(0, 0, 0, 0.87);
+  border-top-color: transparent;
+}
+
+.dLabelOutline:hover > input + span::before, 
+.dLabelOutline:hover > textarea + span::before,
+.dLabelOutline:hover > input + span::after,
+.dLabelOutline:hover > textarea + span::after {
+  border-top-color: rgba(0, 0, 0, 0.87);
+}
+
+.dLabelOutline:hover > input:not(:focus):placeholder-shown,
+.dLabelOutline:hover > textarea:not(:focus):placeholder-shown {
+  border-color: rgba(0, 0, 0, 0.87);
+}
+
+/* Placeholder-shown */
+.dLabelOutline > input:not(:focus):placeholder-shown,
+.dLabelOutline > textarea:not(:focus):placeholder-shown {
+  border-top-color: rgba(0, 0, 0, 0.3);
+}
+
+.dLabelOutline > input:not(:focus):placeholder-shown + span,
+.dLabelOutline > textarea:not(:focus):placeholder-shown + span {
+  font-size: inherit;
+  line-height: 68px;
+}
+
+.dLabelOutline > input:not(:focus):placeholder-shown + span::before,
+.dLabelOutline > textarea:not(:focus):placeholder-shown + span::before,
+.dLabelOutline > input:not(:focus):placeholder-shown + span::after,
+.dLabelOutline > textarea:not(:focus):placeholder-shown + span::after {
+  border-top-color: transparent;
+}
+
+/* Focus */
+.dLabelOutline > input:focus,
+.dLabelOutline > textarea:focus {
+  border-color: rgb(110, 152, 114);
+  border-top-color: transparent;
+  box-shadow: inset 1px 0 var(--pure-material-safari-helper1), inset -1px 0 var(--pure-material-safari-helper1), inset 0 -1px var(--pure-material-safari-helper1);
+  outline: none;
+}
+
+.dLabelOutline > input:focus + span,
+.dLabelOutline > textarea:focus + span {
+  color: rgb(110, 152, 114);
+}
+
+.dLabelOutline > input:focus + span::before,
+.dLabelOutline > input:focus + span::after,
+.dLabelOutline > textarea:focus + span::before,
+.dLabelOutline > textarea:focus + span::after {
+  border-top-color: var(--pure-material-safari-helper1) !important;
+  box-shadow: inset 0 1px var(--pure-material-safari-helper1);
+}
+
+/* Disabled */
+.dLabelOutline > input:disabled,
+.dLabelOutline > input:disabled + span,
+.dLabelOutline > textarea:disabled,
+.dLabelOutline > textarea:disabled + span {
+  border-color: rgba(0, 0, 0, 0.38) !important;
+  border-top-color: transparent !important;
+  color: rgba(0, 0, 0, 0.38);
+  pointer-events: none;
+}
+
+.dLabelOutline > input:disabled + span::before,
+.dLabelOutline > input:disabled + span::after,
+.dLabelOutline > textarea:disabled + span::before,
+.dLabelOutline > textarea:disabled + span::after {
+  border-top-color: rgba(0, 0, 0, 0.38) !important;
+}
+
+.dLabelOutline > input:disabled:placeholder-shown,
+.dLabelOutline > input:disabled:placeholder-shown + span,
+.dLabelOutline > textarea:disabled:placeholder-shown,
+.dLabelOutline > textarea:disabled:placeholder-shown + span {
+  border-top-color: rgba(0, 0, 0, 0.38) !important;
+}
+
+.dLabelOutline > input:disabled:placeholder-shown + span::before,
+.dLabelOutline > input:disabled:placeholder-shown + span::after,
+.dLabelOutline > textarea:disabled:placeholder-shown + span::before,
+.dLabelOutline > textarea:disabled:placeholder-shown + span::after {
+  border-top-color: transparent !important;
+}
+
+/* Faster transition in Safari for less noticable fractional font-size issue */
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) {
+      .dLabelOutline > input,
+      .dLabelOutline > input + span,
+      .dLabelOutline > textarea,
+      .dLabelOutline > textarea + span,
+      .dLabelOutline > input + span::before,
+      .dLabelOutline > input + span::after,
+      .dLabelOutline > textarea + span::before,
+      .dLabelOutline > textarea + span::after {
+          transition-duration: 0.1s;
+      }
+  }
+}
