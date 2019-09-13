@@ -7,7 +7,7 @@ body {
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: url("/static/home.jpg") center no-repeat;
+  background: url('/static/home.jpg') center no-repeat;
   background-size: cover;
   color: #fff;
 }
