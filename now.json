@@ -1,7 +1,7 @@
 {
   "name": "devsolutions",
   "version": 2,
-  "alias": "devsolutions.us",
+  "alias": "devsolution.us",
   "builds": [
     {
       "src": "next.config.js",
