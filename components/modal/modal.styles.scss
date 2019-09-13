@@ -1,0 +1,49 @@
+.myModal {
+	display: block;
+	position: fixed;
+	/* Stay in place */
+	z-index: 100;
+	/* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4);
+	/* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modalContent {
+	background-color: #fefefe;
+	margin: 15% auto;
+	/* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 50vw !important;
+	/* Could be more or less, depending on screen size */
+}
+
+.return{
+	text-align: center;
+    display: block;
+	margin: 0 auto;
+	width: 20%;
+	background-color: #6e9872;
+	color: white;
+	border-radius: .8em;
+	border: solid #6e9872;
+	cursor: pointer;
+	box-shadow: 2.5px 5px black;
+	transition-duration: .5s;
+        }
+
+.return:hover{
+    background-color: #32A63D;
+	border: solid #32A63D;
+}
