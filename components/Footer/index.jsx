@@ -50,7 +50,12 @@ const Footer = ({ language, changeLanguage, messages }) => {
           </h6>
         </Col>
         <Col xs={12}>
-          <h5 className='text-center'>{`© Dev Solutions 2019. ${messages.COPYRIGHT}.`}</h5>
+          <h5
+            className='text-center' style={{
+              fontSize: '1rem'
+            }}
+          >{`© Dev Solutions 2019. ${messages.COPYRIGHT}.`}
+          </h5>
         </Col>
       </Row>
     </footer>
