@@ -1,11 +1,11 @@
-import React, { createRef, useRef, useState } from 'react'
+import React, { createRef, useState } from 'react'
 import { Col } from 'react-bootstrap'
 import classes from '../../styles/components/contact.scss'
 import axios from 'axios'
 import ReCAPTCHA from 'react-google-recaptcha'
-import Modal from './../modal/Modal';
+import Modal from './../modal/Modal'
 
-const RECAPTCHA_SITEKEY = '6LfbVLgUAAAAADBfOaT9JT2A6Cs1nxeIoEKMQ4dy';
+const RECAPTCHA_SITEKEY = '6LfbVLgUAAAAAP1tJ06YnNdnZo6moGKe-kuCOV-v'
 const ReCAPTCHARef = createRef()
 const config = {
   headers: {
@@ -53,45 +53,46 @@ export default () => {
     message.length > 0
 
   return (
-    <React.Fragment>
+    <>
       {
         open &&
-        <Modal onClose={handleClose}>
+          <Modal onClose={handleClose}>
           Mensaje enviado con éxito.
-        </Modal>
-      } 
-        <Col
-              xs='12'
-              md='6'
-              className={classes.formCol}
-            >
-              <form className={classes.form} onSubmit={handleSubmit}>
-                <label class={`${classes.dLabelOutline} w-100`}>
-                  <input type='text' placeholder=' ' name='name' value={name} onChange={handleChange} />
-                  <span>Name</span>
-                </label>
-      
-                <label class={`${classes.dLabelOutline} w-100`}>
-                  <input type='email' placeholder=' ' name='email' value={email} onChange={handleChange} />
-                  <span>Email</span>
-                </label>
-      
-                <label class={`${classes.dLabelOutline} w-100`}>
-                  <textarea rows='4' placeholder=' ' name='message' value={message} onChange={handleChange} />
-                  <span>Message</span>
-                </label>
-                <button
-                  className={`${classes.button} w-50`}
-                  type="submit" disabled={!isValidated}
-                >
+          </Modal>
+      }
+      <Col
+        xs='12'
+        md='6'
+        className={classes.formCol}
+      >
+        <form className={classes.form} onSubmit={handleSubmit}>
+          <label class={`${classes.dLabelOutline} w-100`}>
+            <input type='text' placeholder=' ' name='name' value={name} onChange={handleChange} />
+            <span>Name</span>
+          </label>
+
+          <label class={`${classes.dLabelOutline} w-100`}>
+            <input type='email' placeholder=' ' name='email' value={email} onChange={handleChange} />
+            <span>Email</span>
+          </label>
+
+          <label class={`${classes.dLabelOutline} w-100`}>
+            <textarea rows='4' placeholder=' ' name='message' value={message} onChange={handleChange} />
+            <span>Message</span>
+          </label>
+          <button
+            className={`${classes.button} w-50`}
+            type='submit' disabled={!isValidated}
+          >
                 send
-                </button>
-                <ReCAPTCHA
-                  sitekey={RECAPTCHA_SITEKEY}
-                  size='invisible'
-                  ref={ReCAPTCHARef}
-              />
-              </form>
-            </Col>
-      </React.Fragment>
-)}
+          </button>
+          <ReCAPTCHA
+            sitekey={RECAPTCHA_SITEKEY}
+            size='invisible'
+            ref={ReCAPTCHARef}
+          />
+        </form>
+      </Col>
+    </>
+  )
+}
