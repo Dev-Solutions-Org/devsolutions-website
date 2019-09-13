@@ -16,7 +16,6 @@
   text-transform: uppercase;
   word-wrap: break-word;
   white-space: normal;
-  cursor: pointer;
   border: 0;
   border-radius: .125rem;
   box-shadow: 0 2px 5px 0
@@ -27,7 +26,11 @@
   font-size: .81rem;
   position: relative;
   left: 50%;
-  transform: translateX(-50%)
+  transform: translateX(-50%);
+
+  &:disabled {
+    opacity: 0.5;
+  }
 }
 
 /*

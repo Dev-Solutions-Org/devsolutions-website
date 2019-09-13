@@ -28,6 +28,35 @@ export function getServicesSlider () {
   }
 }
 
+export function getServices () {
+  const { loading, cacheValue: { data, ...errors } = {} } = useGraphQL({
+    fetchOptionsOverride (options) {
+      options.url = `${process.env.API_URL}`
+    },
+    operation: {
+      query: /* GraphQL */ `
+        {
+          services {
+            id
+            icon {
+              url
+            }
+            title
+            short_content
+            slug
+          }
+        }
+      `
+    }
+  })
+
+  return {
+    loading,
+    data,
+    ...errors
+  }
+}
+
 export function getMembersTeam () {
   const { loading, cacheValue: { data, ...errors } = {} } = useGraphQL({
     fetchOptionsOverride (options) {

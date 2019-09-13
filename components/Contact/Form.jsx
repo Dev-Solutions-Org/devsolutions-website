@@ -67,24 +67,25 @@ export default () => {
       >
         <form className={classes.form} onSubmit={handleSubmit}>
           <label class={`${classes.dLabelOutline} w-100`}>
-            <input type='text' placeholder=' ' name='name' value={name} onChange={handleChange} />
+            <input type='text' placeholder=' ' name='name' onChange={handleChange} />
             <span>Name</span>
           </label>
 
           <label class={`${classes.dLabelOutline} w-100`}>
-            <input type='email' placeholder=' ' name='email' value={email} onChange={handleChange} />
+            <input type='email' placeholder=' ' name='email' onChange={handleChange} />
             <span>Email</span>
           </label>
 
           <label class={`${classes.dLabelOutline} w-100`}>
-            <textarea rows='4' placeholder=' ' name='message' value={message} onChange={handleChange} />
+            <textarea rows='4' placeholder=' ' name='message' onChange={handleChange} />
             <span>Message</span>
           </label>
           <button
             className={`${classes.button} w-50`}
-            type='submit' disabled={!isValidated}
+            type='submit'
+            disabled={!isValidated}
           >
-                send
+            send
           </button>
           <ReCAPTCHA
             sitekey={RECAPTCHA_SITEKEY}

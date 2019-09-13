@@ -2,8 +2,7 @@ import React from 'react'
 import { Container, Row } from 'react-bootstrap'
 import { getMembersTeam } from '../graphql'
 import classes from '../styles/pages/team.scss'
-import { MembersRoll } from '../components'
-import Spinner from './../components/spinner/Spinner';
+import { MembersRoll, Spinner } from '../components'
 
 export default function Team () {
   const { loading, data, ...errors } = getMembersTeam()
@@ -18,7 +17,7 @@ export default function Team () {
         </Row>
       </Container>
     ) : loading ? (
-      <Spinner/>
+      <Spinner />
     ) : (
       `Error! ${errors}`
     )
