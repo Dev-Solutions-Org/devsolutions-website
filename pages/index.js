@@ -1,5 +1,6 @@
 import Slider from 'react-animated-slider'
 import { getServicesSlider } from '../graphql'
+import Spinner from './../components/spinner/Spinner';
 
 export default () => {
   const { loading, data, ...errors } = getServicesSlider()
@@ -25,7 +26,7 @@ export default () => {
         ))}
       </Slider>
     ) : loading ? (
-      <h1>Cargando</h1>
+      <Spinner/>
     ) : (
       `Error! ${errors}`
     )
