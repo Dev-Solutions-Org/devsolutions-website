@@ -4,7 +4,7 @@ import { Link } from '..'
 import classes from '../../styles/components/header.scss'
 
 export default () => (
-  <Navbar className={`${classes.navbar} bg-white mb-2`} expand='md'>
+  <Navbar className={`${classes.navbar} bg-white`} expand='md'>
     <Navbar.Brand href='/' as={Link}>
       <img src='/static/logo.png' alt='Header logo' className='header-logo pointer' width={150} />
     </Navbar.Brand>

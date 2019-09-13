@@ -1,4 +1,5 @@
 const withSass = require('@zeit/next-sass')
+const withCss = require('@zeit/next-css')
 const withProgressBar = require('next-progressbar')
 const withPlugins = require('next-compose-plugins')
 const { withGraphQLConfig } = require('next-graphql-react/server')
@@ -7,6 +8,7 @@ require('dotenv').config()
 
 module.exports = withPlugins([
   withGraphQLConfig,
+  withCss,
   [withSass, {
     cssModules: true,
     cssLoaderOptions: {

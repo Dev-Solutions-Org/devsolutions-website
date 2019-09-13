@@ -9,6 +9,7 @@ import { GraphQLProvider } from 'graphql-react'
 import { Layout } from '../components'
 import { EN_DESCRIPTION, KEYWORDS } from '../constants'
 import withReduxStore from '../lib/with-redux-store'
+import '../styles/styles.css'
 
 class MyApp extends App {
   render () {
