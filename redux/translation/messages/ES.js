@@ -1,4 +1,11 @@
 export const ES_MESSAGES = {
+   HEADER: {
+    HOME: 'Inicio',
+    SERVICES: 'Servicios',
+    PORTFOLIO: 'Portafolio',
+    TEAM: 'Equipo',
+    CONTACT: 'Contacto',
+  },
   FOOTER: {
     COPYRIGHT: 'Todos los derechos reservados',
     CHOOSE: 'Selecciona el idioma',
