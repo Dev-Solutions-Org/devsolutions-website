@@ -28,6 +28,7 @@
     "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "16.9.0",
     "react-google-recaptcha": "^2.0.0-rc.1",
+    "react-markdown": "^4.2.2",
     "react-redux": "^7.1.1",
     "recaptcha": "^1.2.1",
     "redux": "^4.0.4",

@@ -1,8 +1,8 @@
 import { useGraphQL } from 'graphql-react'
 
-export function getServicesSlider () {
+export function getServicesSlider() {
   const { loading, cacheValue: { data, ...errors } = {} } = useGraphQL({
-    fetchOptionsOverride (options) {
+    fetchOptionsOverride(options) {
       options.url = `${process.env.API_URL}`
     },
     operation: {
@@ -28,9 +28,9 @@ export function getServicesSlider () {
   }
 }
 
-export function getServices () {
+export function getServices() {
   const { loading, cacheValue: { data, ...errors } = {} } = useGraphQL({
-    fetchOptionsOverride (options) {
+    fetchOptionsOverride(options) {
       options.url = `${process.env.API_URL}`
     },
     operation: {
@@ -57,9 +57,36 @@ export function getServices () {
   }
 }
 
-export function getMembersTeam () {
+export function getSingleService(slug) {
   const { loading, cacheValue: { data, ...errors } = {} } = useGraphQL({
-    fetchOptionsOverride (options) {
+    fetchOptionsOverride(options) {
+      options.url = `${process.env.API_URL}`
+    },
+    operation: {
+      query: /* GraphQL */ `
+        {
+          services(where: { slug_contains: "${slug}" }) {
+            title
+            content
+            icon {
+              url
+            }
+          }
+        }
+      `
+    }
+  })
+
+  return {
+    loading,
+    data,
+    ...errors
+  }
+}
+
+export function getMembersTeam() {
+  const { loading, cacheValue: { data, ...errors } = {} } = useGraphQL({
+    fetchOptionsOverride(options) {
       options.url = `${process.env.API_URL}`
     },
     operation: {
