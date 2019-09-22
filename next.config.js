@@ -24,7 +24,7 @@ module.exports = withPlugins([
     }
   ]
 ], {
-  target: 'serverless',
+  target: 'server',
   webpack (config) {
     config.plugins.push(
       new webpack.EnvironmentPlugin(process.env)
