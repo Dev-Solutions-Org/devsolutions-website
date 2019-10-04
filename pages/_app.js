@@ -36,6 +36,18 @@ class MyApp extends App {
           <meta name='copyright' content='Dev Solutions' />
           <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossOrigin='anonymous' />
           <link href='https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap' rel='stylesheet' />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149342645-1"></script>
+          <script
+            type='text/javascript'
+            dangerouslySetInnerHTML={{
+              __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'UA-149342645-1');
+              `
+            }}
+          />
         </Head>
         <NProgress color='#6e9872' spinner={false} />
         <Provider store={reduxStore}>
